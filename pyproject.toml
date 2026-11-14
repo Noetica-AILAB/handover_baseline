@@ -1,0 +1,43 @@
+[project]
+name = "handover-baseline"
+version = "0.1.0"
+requires-python = ">=3.10,<3.11"
+dependencies = []
+
+[dependency-groups]
+# 公共依赖
+common = [
+    "numpy==1.26.*",
+    "opencv-python>=4.8",
+    "torch==2.6.0",
+    "omegaconf>=2.3",
+]
+
+handover_baseline = [
+    { include-group = "common" },
+    "setuptools>=65,<80",
+    "ultralytics>=8.0",
+    "ur-rtde",
+    "pyrobotiqgripper",
+    "empy==3.3.4",
+    "colcon-common-extensions>=0.3.0",
+    "lark>=1.3.1",
+    "colcon-core>=0.21.3",
+]
+
+Fast_FoundationStereo = [
+    { include-group = "common" },
+    "torchvision==0.21.0",
+    "xformers",
+    "timm",
+    "einops",
+    "scipy",
+    "scikit-image",
+    "imageio",
+    "pyyaml",
+    "open3d",
+    # ONNX / TensorRT 依赖按需添加。
+]
+
+[tool.uv]
+default-groups = "all"
