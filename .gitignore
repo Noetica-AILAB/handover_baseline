@@ -16,9 +16,6 @@ build/
 install/
 log/
 
-# --- 本地草稿脚本 ---
-/scripts/
-
 # --- 文档与 Agent 计划缓存 ---
 /docs/superpowers/
 
@@ -37,3 +34,5 @@ Thumbs.db
 
 # yolo训练结果
 /runs
+
+scripts/hand_eye_calibration/output
