@@ -23,6 +23,8 @@ handover_baseline = [
     "colcon-common-extensions>=0.3.0",
     "lark>=1.3.1",
     "colcon-core>=0.21.3",
+    "pyrealsense2>=2.59.1.11053",
+    "pyzed==5.6 ; platform_machine == 'x86_64' and sys_platform == 'linux'",
 ]
 
 Fast_FoundationStereo = [
@@ -37,7 +39,12 @@ Fast_FoundationStereo = [
     "pyyaml",
     "open3d",
     # ONNX / TensorRT 依赖按需添加。
+    "onnx>=1.23.2",
+    "tensorrt-cu12>=10,<11",
 ]
 
 [tool.uv]
 default-groups = "all"
+
+[tool.uv.sources]
+pyzed = { url = "https://download.stereolabs.com/zedsdk/5.6/whl/linux_x86_64/pyzed-5.6-cp310-cp310-linux_x86_64.whl" }
